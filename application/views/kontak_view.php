@@ -7,11 +7,11 @@
           <div class="contact_title">say hello
           </div>
           <div class="estate_contact_form_container">
-            <form id="estate_contact_form" class="estate_contact_form" action="post">
-              <input id="estate_contact_form_name" class="estate_input_field estate_contact_form_name" type="text" placeholder="Name" required="required" data-error="Name is required.">
-              <input id="estate_contact_form_email" class="estate_input_field estate_contact_form_email" type="email" placeholder="E-mail" required="required" data-error="Valid email is required.">
-              <input id="estate_contact_form_subject" class="estate_input_field estate_contact_form_subject" type="email" placeholder="Subject" required="required" data-error="Subject is required.">
-              <textarea id="estate_contact_form_message" class="estate_text_field estate_contact_form_message" name="message" placeholder="Message" required="required" data-error="Please, write us a message.">
+            <form id="estate_contact_form" class="estate_contact_form" action="<?php echo base_url('kontak/kirim_pesan')?>" method="post">
+              <input class="estate_input_field estate_contact_form_name" type="text" name="pesan_nama" placeholder="*Nama" required>
+              <input class="estate_input_field estate_contact_form_email" type="text" name="pesan_nohp" placeholder="*No Handphone" required>
+              <input class="estate_input_field estate_contact_form_subject" type="email" placeholder="E-mail">
+              <textarea class="estate_text_field estate_contact_form_message" name="pesan_isi" placeholder="*Isi Pesan" required>
               </textarea>
               <button id="estate_contact_send_btn" type="submit" class="estate_contact_send_btn trans_200" value="Submit">send
               </button>

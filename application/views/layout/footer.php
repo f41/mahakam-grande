@@ -32,13 +32,14 @@
         
         <!-- Footer Contact Form -->
         <div class="col-lg-4 footer_col">
-          <div class="footer_col_title">say hello</div>
+          <div class="footer_col_title">pertanyaan?</div>
           <div class="footer_contact_form_container">
-            <form id="footer_contact_form" class="footer_contact_form" action="post">
-              <input id="contact_form_name" class="input_field contact_form_name" type="text" placeholder="Name" required="required" data-error="Name is required.">
-              <input id="contact_form_email" class="input_field contact_form_email" type="email" placeholder="E-mail" required="required" data-error="Valid email is required.">
-              <textarea id="contact_form_message" class="text_field contact_form_message" name="message" placeholder="Message" required="required" data-error="Please, write us a message."></textarea>
-              <button id="contact_send_btn" type="submit" class="contact_send_btn trans_200" value="Submit">send</button>
+            <form class="footer_contact_form" action="<?php echo base_url('kontak/kirim_pesan')?>" method="post">
+              <input class="input_field contact_form_name" type="text" name="pesan_nama" placeholder="*Nama" required>
+              <input class="input_field contact_form_email" type="text" name="pesan_nohp" placeholder="*No Handphone" required>
+              <input class="input_field contact_form_email" type="email" name="pesan_email" placeholder="E-mail">
+              <textarea class="text_field contact_form_message" name="pesan_isi" placeholder="*Isi Pesan" required></textarea>
+              <button type="submit" class="contact_send_btn trans_200" value="Submit">send</button>
             </form>
           </div>
         </div>

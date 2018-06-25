@@ -12,6 +12,12 @@ class Grande_model extends CI_Model {
 		return $query->row_array();
 	}
 
+	//Mengirim Pesan
+	public function kirim_pesan($data)
+	{
+		return $this->db->insert('tb_pesan',$data);
+	}
+
 	//Menampilkan Data Rumah
 	public function rumah() 
 	{
@@ -19,6 +25,7 @@ class Grande_model extends CI_Model {
 		return $query->result_array();
 	}
 
+	//Melihat Rumah Tertentu
 	public function detail($id)
 	{
 		$query = $this->db->get_where('tb_rumah', array('rumah_id' => $id));

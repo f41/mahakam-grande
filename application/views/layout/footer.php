@@ -95,6 +95,12 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="<?php echo base_url('assets/');?>plugins/easing/easing.js"></script>
 <script src="<?php echo base_url('assets/');?>js/custom.js"></script>
 <script src="<?php echo base_url('assets/');?>js/listings_single_custom.js"></script>
+
+<script src="<?php echo base_url('assets/');?>js/sweetalert.js"></script>
+
+<?php echo $this->session->flashdata('notif'); ?>
+  
+</script>
 </body>
 
 </html>

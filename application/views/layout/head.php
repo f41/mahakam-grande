@@ -26,5 +26,8 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/');?>styles/listings_single_styles.css">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/');?>styles/listings_single_responsive.css">
 
+<?php elseif ($menu === 'berita'): ?>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/');?>styles/listings_styles.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/');?>styles/listings_responsive.css">
 <?php endif; ?>
 </head>

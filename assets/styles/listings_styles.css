@@ -871,13 +871,13 @@ section
 }
 .listing_image_container
 {
-	width: 50%;
+	width: 30%;
 	padding-right: 15px;
 }
 .listing_image
 {
 	width: 100%;
-	height: calc(100% - 86px);
+	height: 100%;
 }
 .listing_background
 {
@@ -892,7 +892,7 @@ section
 }
 .listing_content
 {
-	width: 50%;
+	width: 70%;
 	padding-left: 26px;
 	background: #edeff4;
 	padding-bottom: 27px;

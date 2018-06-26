@@ -29,6 +29,10 @@ class Kontak extends CI_Controller {
 						'pesan_isi'		=> $this->input->post('pesan_isi')
 					);
 		$this->Grande_model->kirim_pesan($data);
+		$this->session->set_flashdata('notif', 
+					'<script type="text/javascript">
+						swal("Pertanyaan Anda Berhasil Dikirim", "Mohon Menunggu Balasan Dari Kami", "success");
+					 </script>');
 		redirect(base_url().'kontak');
 	}
 }

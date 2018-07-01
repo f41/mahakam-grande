@@ -5,13 +5,17 @@
             <li class="nav-item">
               <a class="nav-link" href="<?php echo base_url('admin/dashboard');?>">
                 <i class="nav-icon icon-speedometer"></i> Dashboard
-                <span class="badge badge-primary">NEW</span>
               </a>
             </li>
             <li class="nav-title">Menu</li>
             <li class="nav-item">
               <a class="nav-link" href="<?php echo base_url('admin/rumah');?>">
                 <i class="nav-icon icon-home"></i> Perumahan
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="<?php echo base_url('admin/berita')?>">
+                <i class="nav-icon icon-home"></i> Berita
               </a>
             </li>
             <li class="nav-item nav-dropdown">

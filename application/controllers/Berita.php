@@ -15,7 +15,8 @@ class Berita extends CI_Controller {
 						'menu'		=> 'berita',
 						'isi'	    => 'berita_view',
 						'rumah'		=> $this->Grande_model->rumah(),
-						'kontak'	=> $this->Grande_model->kontak()
+						'kontak'	=> $this->Grande_model->kontak(),
+						'berita'	=> $this->Grande_model->berita()
 					  );
 		$this->load->view('layout/wrapper',$data);
 	}

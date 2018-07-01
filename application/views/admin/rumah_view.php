@@ -8,8 +8,8 @@
 
               <!-- Breadcrumb Menu-->
           <li class="breadcrumb-menu d-md-down-none">
-              <a href="<?php echo base_url('admin/rumah/tambah');?>" class="btn btn-primary">
-<i class="fa fa-plus"></i>&nbsp;Tambah Perumahan</a>
+              <a href="<?php echo base_url('admin/rumah/tambah');?>" class="btn btn-lg">
+<i class="icon-plus"></i>&nbsp;Tambah Perumahan</a>
             
           </li>
   </ol>
@@ -29,7 +29,7 @@
                   </i>
                 </a>
                 <a href="#" class="card-header-action">
-                  <i class="icon-pencil">
+                  <i class="icon-trash">
                   </i>
                 </a>
               </div>

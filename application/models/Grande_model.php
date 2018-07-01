@@ -31,5 +31,14 @@ class Grande_model extends CI_Model {
 		$query = $this->db->get_where('tb_rumah', array('rumah_id' => $id));
 		return $query->row_array();
 	}
+
+	public function berita() 
+	{
+		$this->db->select('*');
+		$this->db->from('tb_berita');
+		$this->db->join('tb_user', 'berita_dibuat = username');
+		$query = $this->db->get();
+		return $query->result_array();
+	}
 }
 ?>

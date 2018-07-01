@@ -1,60 +1,39 @@
-<!-- Listings -->
-<div class="listings">
-  <div class="container">
-    <div class="row">
-      <!-- Listings -->
-      <div class="col-lg-12 listings_col">
-        <!-- Listings Item -->
-        <div class="listing_item">
-          <div class="listing_item_inner d-flex flex-md-row flex-column trans_300">
-            <div class="listing_image_container">
-              <div class="listing_image">
-                <!-- Image by: https://unsplash.com/@breather -->
-                <div class="listing_background" style="background-image:url(<?php echo base_url('assets/')?>images/listing_1.jpg)">
-                </div>
-              </div>
+  <!-- News -->
+
+  <div class="news">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-12 news_content_col">
+          <?php foreach ($berita as $list) { ?>
+          <!-- News Post -->
+          <div class="news_post">
+            <div class="news_post_date"><?php echo $list['berita_tglbuat']?></div>
+            <div class="news_post_title"><a href="#"><?php echo $list['berita_judul']?></a></div>
+            <div class="news_post_meta">
+              <ul>
+                <li class="news_post_meta_item">
+                  <div class="news_post_meta_icon">
+                    <img src="<?php echo base_url('assets/')?>images/profile.svg" alt="https://www.flaticon.com/authors/lucy-g">
+                  </div>
+                  <span><a href="#"><?php echo $list['nama_user']?></a></span>
+                </li>
+              </ul>
             </div>
-            <div class="listing_content">
-              <div class="listing_title">
-                <a href="listings_single.html">House in West California
-                </a>
-              </div>
-              <div class="listing_text">Donec ullamcorper nulla non metus auctor fringi lla. Curabitur blandit tempus porttitor.
-              </div>
-              <div class="room_tags">
-                <span class="room_tag">
-                  <a href="#"><i class="fa fa-clock"></i> Tanggal Post
-                  </a>
-                </span>
-                <span class="room_tag">
-                  <a href="#"><i class="fa fa-user"></i> Nama
-                  </a>
-                </span>
-              </div>
+            <div class="news_post_image">
+              <img src="<?php echo base_url('assets/images/berita/')?><?php echo $list['berita_gambar']?>">
             </div>
+            <div class="news_post_text">
+              <p><?php echo $list['berita_isi']?></p>
+            </div>
+            <!--<div class="button news_post_button"><a href="#">read more</a></div> -->
           </div>
+          <?php } ?>
+
         </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col clearfix">
-        <div class="listings_nav">
-          <ul>
-            <li class="listings_nav_item active">
-              <a href="#">01.
-              </a>
-            </li>
-            <li class="listings_nav_item">
-              <a href="#">02.
-              </a>
-            </li>
-            <li class="listings_nav_item">
-              <a href="#">03.
-              </a>
-            </li>
-          </ul>
-        </div>
+
+        
+
       </div>
     </div>
   </div>
-</div>

@@ -110,7 +110,7 @@
                 </p>
                 <div class="testimonial_user">
                   <div class="testimonial_image mx-auto">
-                    <img src="images/person.jpg" alt="https://unsplash.com/@remdesigns">
+                    <img src="<?php echo base_url('assets/')?>images/testimoni/person.jpg" alt="https://unsplash.com/@remdesigns">
                   </div>
                   <div class="testimonial_name">natalie smith
                   </div>
@@ -126,7 +126,7 @@
                 </p>
                 <div class="testimonial_user">
                   <div class="testimonial_image mx-auto">
-                    <img src="images/person.jpg" alt="https://unsplash.com/@remdesigns">
+                    <img src="<?php echo base_url('assets/')?>images/testimoni/person.jpg" alt="https://unsplash.com/@remdesigns">
                   </div>
                   <div class="testimonial_name">natalie smith
                   </div>
@@ -142,7 +142,7 @@
                 </p>
                 <div class="testimonial_user">
                   <div class="testimonial_image mx-auto">
-                    <img src="images/person.jpg" alt="https://unsplash.com/@remdesigns">
+                    <img src="<?php echo base_url('assets/')?>images/testimoni/person.jpg" alt="https://unsplash.com/@remdesigns">
                   </div>
                   <div class="testimonial_name">natalie smith
                   </div>
@@ -189,7 +189,7 @@
               </div>
             </div>
             <div class="workflow_image">
-              <img src="images/workflow_1.png" alt="">
+              <img src="<?php echo base_url('assets/')?>images/workflow_1.png" alt="">
             </div>
           </div>
           <div class="workflow_item_content text-center">
@@ -215,7 +215,7 @@
               </div>
             </div>
             <div class="workflow_image">
-              <img src="images/workflow_2.png" alt="">
+              <img src="<?php echo base_url('assets/')?>images/workflow_2.png" alt="">
             </div>
           </div>
           <div class="workflow_item_content text-center">
@@ -241,7 +241,7 @@
               </div>
             </div>
             <div class="workflow_image">
-              <img src="images/workflow_3.png" alt="">
+              <img src="<?php echo base_url('assets/')?>images/workflow_3.png" alt="">
             </div>
           </div>
           <div class="workflow_item_content text-center">

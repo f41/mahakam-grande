@@ -27,4 +27,6 @@
     <link href="<?php echo base_url('assets/admin/');?>css/style.css" rel="stylesheet">
     <link href="<?php echo base_url('assets/admin/');?>vendors/pace-progress/css/pace.min.css" rel="stylesheet">
     <link href="<?php echo base_url('assets/admin/');?>css/bootstrap-fileupload.min.css" rel="stylesheet">
+    <!-- DataTable -->
+    <link href="<?php echo base_url('assets/admin/');?>node_modules/datatable/css/dataTables.bootstrap4.min.css" rel="stylesheet">
   </head>

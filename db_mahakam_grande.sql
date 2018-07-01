@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 24, 2018 at 07:41 PM
+-- Generation Time: Jul 01, 2018 at 09:49 AM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 5.6.33
 
@@ -21,6 +21,22 @@ SET time_zone = "+00:00";
 --
 -- Database: `db_mahakam_grande`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_berita`
+--
+
+CREATE TABLE `tb_berita` (
+  `berita_id` varchar(12) NOT NULL,
+  `berita_judul` varchar(50) NOT NULL,
+  `berita_gambar` text NOT NULL,
+  `berita_isi` text NOT NULL,
+  `berita_tglbuat` datetime NOT NULL,
+  `berita_dibuat` varchar(10) NOT NULL,
+  `berita_status` varchar(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -53,8 +69,8 @@ INSERT INTO `tb_kontak` (`kontak_id`, `kontak_alamatkantor`, `kontak_nohp`, `kon
 CREATE TABLE `tb_pesan` (
   `pesan_id` varchar(12) NOT NULL,
   `pesan_nama` varchar(40) NOT NULL,
-  `pesan_email` varchar(50) NOT NULL,
-  `pesan_subject` varchar(100) NOT NULL,
+  `pesan_nohp` varchar(14) NOT NULL,
+  `pesan_email` varchar(50) DEFAULT NULL,
   `pesan_isi` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -82,13 +98,6 @@ CREATE TABLE `tb_rumah` (
   `rumah_harga` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `tb_rumah`
---
-
-INSERT INTO `tb_rumah` (`rumah_id`, `rumah_nama`, `rumah_luas_tanah`, `rumah_luas_bangunan`, `rumah_kamar_tidur`, `rumah_kamar_mandi`, `rumah_lantai`, `rumah_spesifikasi`, `rumah_fasilitas`, `rumah_gmap`, `rumah_gambar1`, `rumah_gambar2`, `rumah_gambar3`, `rumah_gambar4`, `rumah_harga`) VALUES
-(1, 'Type 36', 104, 36, 2, 1, 1, '1. Pondasi Batu Gunung\r\n2. Sloof Beton Bertulang\r\n3. Lantai Keramik 30x30 Cm\r\n4. Kusen Kayu Keras, Pintu Panel Kayu Medang / Plywood\r\n5. Rangka Atap Kayu Keras / Baja Ringan\r\n6. Atap Setara Soka / Genteng Metal\r\n7. Kamar Mandi Kloset Jongkok / Bak\r\n8. Pintu Panel + Plywood\r\n9. Dinding Batako Plester + Cat Full Finishing\r\n10. Listrik 1300 Watt\r\n11. WTP', 'Sarana Ibadah, Listrik, Air Bersih, Akses Jalan Lebar, dan Sarana Lainnya.', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.681249813888!2d117.08529321386985!3d-0.4749351996534971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df67eaf1aab8a91%3A0xb4b3dc15d47c1450!2sPerumahan+Mahakam+Grande!5e0!3m2!1sen!2sid!4v1527608615336\" width=\"800\" height=\"600\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>', 'type36.jpg', '', '', '', 142000000);
-
 -- --------------------------------------------------------
 
 --
@@ -112,6 +121,12 @@ INSERT INTO `tb_user` (`username`, `nama_user`, `email`, `password`) VALUES
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `tb_berita`
+--
+ALTER TABLE `tb_berita`
+  ADD PRIMARY KEY (`berita_id`);
 
 --
 -- Indexes for table `tb_kontak`
@@ -145,7 +160,7 @@ ALTER TABLE `tb_user`
 -- AUTO_INCREMENT for table `tb_rumah`
 --
 ALTER TABLE `tb_rumah`
-  MODIFY `rumah_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `rumah_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

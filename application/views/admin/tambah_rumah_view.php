@@ -128,6 +128,19 @@
                       <input type="number" name="rumah_harga" class="form-control" placeholder="Harga" onkeypress="return isNumberKey(event)" required>
                     </div>
                   </div>
+                  <div class="form-group col-lg">
+                    <label for="company">Stok
+                    </label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">
+                          <i class="fa fa-home">
+                          </i>
+                        </span>
+                      </div>
+                      <input type="number" name="rumah_stok" class="form-control" placeholder="Stok Rumah" onkeypress="return isNumberKey(event)" required>
+                    </div>
+                  </div>
                 </div>
                 <div class="row">
                   <?php for ($i=0; $i <=3 ; $i++) :?>
@@ -144,7 +157,7 @@
                           </span>
                           <span class="fileupload-exists">Change
                           </span>
-                          <input type="file" name="userfile[]" required />
+                          <input type="file" name="userfile[]" accept="image/*" required />
                         </span>
                         <a href="#" class="btn btn-danger fileupload-exists" data-dismiss="fileupload">Remove
                         </a>

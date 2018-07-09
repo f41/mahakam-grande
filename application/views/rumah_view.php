@@ -31,22 +31,22 @@
               
               <!-- Listing Slider Item -->
               <div class="owl-item listing_slider_item">
-                <img src="<?php echo base_url('assets/images/rumah/')?><?php echo $rumah['rumah_gambar1']?>">
+                <img src="<?php echo base_url('assets/images/rumah/')?><?php echo $rumah['rumah_gambar1']?>" width="100%" height="577px">
               </div>
 
               <!-- Listing Slider Item -->
               <div class="owl-item listing_slider_item">
-                <img src="<?php echo base_url('assets/images/rumah/')?><?php echo $rumah['rumah_gambar2']?>">
+                <img src="<?php echo base_url('assets/images/rumah/')?><?php echo $rumah['rumah_gambar2']?>" width="100%" height="577px">
               </div>
 
               <!-- Listing Slider Item -->
               <div class="owl-item listing_slider_item">
-                <img src="<?php echo base_url('assets/images/rumah/')?><?php echo $rumah['rumah_gambar3']?>">
+                <img src="<?php echo base_url('assets/images/rumah/')?><?php echo $rumah['rumah_gambar3']?>" width="100%" height="577px">
               </div>
 
               <!-- Listing Slider Item -->
               <div class="owl-item listing_slider_item">
-                <img src="<?php echo base_url('assets/images/rumah/')?><?php echo $rumah['rumah_gambar4']?>">
+                <img src="<?php echo base_url('assets/images/rumah/')?><?php echo $rumah['rumah_gambar4']?>" width="100%" height="577px">
               </div>
             </div>
 
@@ -123,48 +123,18 @@
           </div>
           <ul class="additional_details_list">
             <li class="additional_detail">
-              <span>bedroom features:
-              </span> Main Floor Master Bedroom, Walk-In Closet
-            </li>
-            <li class="additional_detail">
-              <span>dining area:
-              </span> Breakfast Counter/Bar, Living/Dining Combo
-            </li>
-            <li class="additional_detail">
-              <span>doors & windows:
-              </span> Bay Window
-            </li>
-            <li class="additional_detail">
-              <span>entry location:
-              </span> Mid Level
-            </li>
-            <li class="additional_detail">
-              <span>floors:
-              </span> Raised Foundation, Vinyl Tile, Wall-to-Wall Carpet, Wood
+              <span><b><?php echo $rumah['rumah_spesifikasi']?></b></span>
             </li>
           </ul>
         </div>
-        <!-- Listing Video -->
-        <div class="listing_video">
-          <div class="listing_subtitle">Property Video
-          </div>
-          <div class="listing_video_link">
-            <a class="video" href="https://vimeo.com/99340873" title="">
-              <img src="images/listing_video.jpg" alt="https://www.pexels.com/u/binyaminmellish/">
-            </a>
-            <div class="video_play">
-              <img src="images/play.svg" alt="">
-            </div>
-          </div>
-        </div>
+
         <!-- Listing Map -->
         <div class="listing_map">
           <div class="listing_subtitle">Property on map
           </div>
           <div id="google_map">
             <div class="map_container">
-              <div id="map">
-              </div>
+              <?php echo $rumah['rumah_gmap']?>
             </div>
           </div>
         </div>

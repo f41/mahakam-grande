@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
+date_default_timezone_set("Asia/Makassar");
 class Berita extends CI_Controller {
 	public function __construct() 
 	{
@@ -27,7 +27,7 @@ class Berita extends CI_Controller {
 						'isi'	=> 'admin/tambah_berita_view');
 			$this->load->view('admin/layout/wrapper',$data);
         }else{
-                $config['file_name']        = date('dmyhis');
+                
 	    		$config['encrypt_name']		= TRUE;
                 $config['upload_path'] 		= './assets/images/berita/';
 	    		$config['allowed_types']    = 'jpg|jpeg|png|gif';

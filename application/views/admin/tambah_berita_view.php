@@ -45,7 +45,7 @@
                           </span>
                           <span class="fileupload-exists">Change
                           </span>
-                          <input type="file" name="berita_gambar" required />
+                          <input type="file" name="berita_gambar" accept="image/*" required />
                         </span>
                         <a href="#" class="btn btn-danger fileupload-exists" data-dismiss="fileupload">Remove
                         </a>

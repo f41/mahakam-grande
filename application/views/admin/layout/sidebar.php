@@ -15,7 +15,12 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="<?php echo base_url('admin/berita')?>">
-                <i class="nav-icon icon-home"></i> Berita
+                <i class="nav-icon fa fa-newspaper-o"></i> Berita
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="<?php echo base_url('admin/pemberkasan')?>">
+                <i class="nav-icon icon-docs"></i> Pemberkasan
               </a>
             </li>
             <li class="nav-item nav-dropdown">

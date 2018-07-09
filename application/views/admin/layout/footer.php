@@ -18,8 +18,8 @@
     <script src="<?php echo base_url('assets/admin/');?>node_modules/@coreui/coreui/dist/js/coreui.min.js"></script>
     <!-- Plugins and scripts -->
     <script src="<?php echo base_url('assets/admin/');?>vendors/bootstrap-fileupload.js"></script>
-    <!-- Plugins and scripts -->
     <script src="<?php echo base_url('assets/admin/');?>node_modules/datatable/datatables.min.js"></script>
+    <script src="<?php echo base_url('assets/admin/');?>node_modules/tooltips.js"></script>
 
     <script type="text/javascript">
       $(document).ready(function() {

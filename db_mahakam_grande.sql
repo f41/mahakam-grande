@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 01, 2018 at 09:49 AM
+-- Generation Time: Jul 09, 2018 at 06:14 AM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 5.6.33
 
@@ -38,6 +38,13 @@ CREATE TABLE `tb_berita` (
   `berita_status` varchar(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `tb_berita`
+--
+
+INSERT INTO `tb_berita` (`berita_id`, `berita_judul`, `berita_gambar`, `berita_isi`, `berita_tglbuat`, `berita_dibuat`, `berita_status`) VALUES
+('080718012350', 'rtfyguhijk', '09cbd139cfb41250d778bdd28629e7c9.png', '<p>uhjkl</p>', '2018-07-08 01:23:50', 'admin', 'POST');
+
 -- --------------------------------------------------------
 
 --
@@ -59,6 +66,37 @@ CREATE TABLE `tb_kontak` (
 
 INSERT INTO `tb_kontak` (`kontak_id`, `kontak_alamatkantor`, `kontak_nohp`, `kontak_email`, `kontak_gmap`, `kontak_about`) VALUES
 (0, 'Jl. Siradj salman Grand Mahakam No. C.5', '0822 5699 8899', 'grande@gmail.com', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.6713018253276!2d117.13287741416475!3d-0.4918678354127417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df67f1b1e9ab9b7%3A0x7b474ef3101bf9f1!2sMahakam+Grande+Marketing+Office!5e0!3m2!1sen!2sid!4v1521991149896\" width=\"100%\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>', 'Kami dari PT. Balikpapan Skylink Property ingin memberikan yang terbaik bagi masyarakat Kota Samarinda dan sekitarnya. Merupakan suatu kebanggaan tersendiri untuk kami ketika dapat mendukung dan berpartisipasi dalam Program Pemerintah yaitu Program Sejuta Rumah Murah. Maka dari itu, kami ingin memperkenalkan sebuah megaproyek yang sedang kami kerjakan. Yaitu Perumahan Mahakam Grande.');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_pemberkasan`
+--
+
+CREATE TABLE `tb_pemberkasan` (
+  `pemberkasan_id` varchar(12) NOT NULL,
+  `pemberkasan_nama` varchar(40) NOT NULL,
+  `pemberkasan_rumah_id` int(11) NOT NULL,
+  `pemberkasan_foto` varchar(255) NOT NULL,
+  `pemberkasan_ktp_suami` varchar(255) DEFAULT NULL,
+  `pemberkasan_ktp_istri` varchar(255) DEFAULT NULL,
+  `pemberkasan_kk` varchar(255) DEFAULT NULL,
+  `pemberkasan_akta_nikah` varchar(255) DEFAULT NULL,
+  `pemberkasan_btn` int(11) NOT NULL,
+  `pemberkasan_npwp` varchar(255) DEFAULT NULL,
+  `pemberkasan_spt` varchar(255) NOT NULL,
+  `pemberkasan_srt_ket_tidak_ada_rumah` varchar(255) NOT NULL,
+  `pemberkasan_keterangan_kerja` varchar(255) DEFAULT NULL,
+  `pemberkasan_slip_gaji` varchar(255) DEFAULT NULL,
+  `pemberkasan_situ` varchar(255) DEFAULT NULL,
+  `pemberkasan_siup` varchar(255) DEFAULT NULL,
+  `pemberkasan_surat_pernyataan` varchar(255) DEFAULT NULL,
+  `pemberkasan_status` char(1) DEFAULT NULL COMMENT 'null = on proses; 0 = reject; 1 = accept;',
+  `pemberkasan_dibuat` varchar(255) NOT NULL,
+  `pemberkasan_tglbuat` datetime NOT NULL,
+  `pemberkasan_diedit` varchar(10) DEFAULT NULL,
+  `pemberkasan_tgledit` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -95,8 +133,16 @@ CREATE TABLE `tb_rumah` (
   `rumah_gambar2` text NOT NULL,
   `rumah_gambar3` text NOT NULL,
   `rumah_gambar4` text NOT NULL,
-  `rumah_harga` int(11) NOT NULL
+  `rumah_harga` int(11) NOT NULL,
+  `rumah_stok` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_rumah`
+--
+
+INSERT INTO `tb_rumah` (`rumah_id`, `rumah_nama`, `rumah_luas_tanah`, `rumah_luas_bangunan`, `rumah_kamar_tidur`, `rumah_kamar_mandi`, `rumah_lantai`, `rumah_spesifikasi`, `rumah_fasilitas`, `rumah_gmap`, `rumah_gambar1`, `rumah_gambar2`, `rumah_gambar3`, `rumah_gambar4`, `rumah_harga`, `rumah_stok`) VALUES
+(1, 'Type 36', 104, 36, 2, 1, 1, '<p>Pondasi Batu Gunung</p>\r\n<p>Sloof Beton Bertulang</p>\r\n<p>Lantai Keramik 30x30 Cm</p>\r\n<p>Kusen Kayu Keras</p>\r\n<p>Pintu Panel Kayu Medang / Plywood</p>\r\n<p>Rangka Atap Kayu Keras / Baja Ringan</p>\r\n<p>Atap Setara Soka / Genteng Metal</p>\r\n<p>Kamar Mandi Kloset Jongkok / Bak</p>\r\n<p>Pintu Panel + Plywood</p>\r\n<p>Dinding Batakko Plester + Cat Full Finishing</p>\r\n<p>Listrik 1300 Watt</p>\r\n<p>WTP</p>', 'Sarana Ibadah, Listrik, Air Bersih, Akses jalan lebar, dan Sarana lainnya', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.6713018253276!2d117.13287741416475!3d-0.4918678354127417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df67f1b1e9ab9b7%3A0x7b474ef3101bf9f1!2sMahakam+Grande+Marketing+Office!5e0!3m2!1sen!2sid!4v1521991149896\" width=\"100%\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>', '4060ab9ea47f3fca84729768f9263bbb.jpg', '91703a1ebd3d2334f3e1070ee8c6ff76.jpg', 'ea38188b4b1e41be7b7a57b74f7a846b.jpeg', '7a378f8f4658a0e7943cee9559f42d48.jpeg', 142000000, 99);
 
 -- --------------------------------------------------------
 
@@ -135,6 +181,12 @@ ALTER TABLE `tb_kontak`
   ADD PRIMARY KEY (`kontak_id`);
 
 --
+-- Indexes for table `tb_pemberkasan`
+--
+ALTER TABLE `tb_pemberkasan`
+  ADD PRIMARY KEY (`pemberkasan_id`);
+
+--
 -- Indexes for table `tb_pesan`
 --
 ALTER TABLE `tb_pesan`
@@ -160,7 +212,7 @@ ALTER TABLE `tb_user`
 -- AUTO_INCREMENT for table `tb_rumah`
 --
 ALTER TABLE `tb_rumah`
-  MODIFY `rumah_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `rumah_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -1,3 +1,8 @@
+<?php
+// Proteksi halaman
+$this->simple_login->cek_login();
+?>
+
 <!DOCTYPE html>
 <!--
 * CoreUI - Free Bootstrap Admin Template
@@ -15,7 +20,7 @@
     <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
     <meta name="author" content="Łukasz Holeczek">
     <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
-    <title>CoreUI Free Bootstrap Admin Template</title>
+    <title>Mahakam Grande Admin</title>
     <!-- Icons-->
     <link href="<?php echo base_url('assets/admin/');?>node_modules/@coreui/icons/css/coreui-icons.min.css" rel="stylesheet">
     <link href="<?php echo base_url('assets/admin/');?>node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">

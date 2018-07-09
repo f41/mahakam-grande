@@ -22,9 +22,12 @@
             </div>
             <a class="dropdown-item" href="#">
               <i class="fa fa-user"></i> Profile</a>
-            <a class="dropdown-item" href="#">
+            <a class="dropdown-item" href="<?php echo base_url('admin/login/logout')?>">
               <i class="fa fa-lock"></i> Logout</a>
           </div>
+        </li>
+        <li class="nav-item px-3">
+          <?php echo ucfirst($this->session->userdata('nama')); ?>
         </li>
       </ul>
 

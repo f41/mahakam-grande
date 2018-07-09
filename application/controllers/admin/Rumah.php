@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
+date_default_timezone_set("Asia/Makassar");
 class Rumah extends CI_Controller {
 
 	public function __construct() 
@@ -61,7 +61,8 @@ class Rumah extends CI_Controller {
 	            	'rumah_gambar2'			=> $dataInfo[1]['file_name'],
 	            	'rumah_gambar3'			=> $dataInfo[2]['file_name'],
 	            	'rumah_gambar4'			=> $dataInfo[3]['file_name'],
-	            	'rumah_harga'			=> $this->input->post('rumah_harga')
+	            	'rumah_harga'			=> $this->input->post('rumah_harga'),
+	            	'rumah_stok'			=> $this->input->post('rumah_stok')
             	);
 		    
 		    $this->Admin_model->tambah_rumah($data);
@@ -79,6 +80,12 @@ class Rumah extends CI_Controller {
 	    $config['max_size']         = '2048'; // 2 MB
     	
     	return $config;
+	}
+
+	//Menghapus Data Paket
+	public function hapus($id) {
+		$this->Admin_model->hapus_rumah($id);
+		redirect(base_url().'admin/berita');
 	}
 
 }

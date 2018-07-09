@@ -32,6 +32,12 @@ class Admin_model extends CI_Model {
 		$query = $this->db->get_where('tb_rumah', array('rumah_id' => $id));
 		return $query->row_array();
 	}
+
+	//Hapus Rumah
+	public function hapus_rumah($id) {
+		$this->db->where('rumah_id',$id);
+		return $this->db->delete('tb_rumah');
+	}
 // End Perumahan
 
 // Berita
@@ -62,11 +68,28 @@ class Admin_model extends CI_Model {
 		return $this->db->update('tb_berita',$data);
 	}
     
-    //Hapus User
+    //Hapus Berita
 	public function hapus_berita($id) {
 		$this->db->where('berita_id',$id);
 		return $this->db->delete('tb_berita');
 	}
 // End Berita
+
+// Pemberkasan
+	//Menampilkan Data Pemberkasan
+	public function pemberkasan() 
+	{
+		$this->db->select('*');
+		$this->db->from('tb_pemberkasan');
+		$this->db->join('tb_rumah', 'pemberkasan_rumah_id = rumah_id');
+		$this->db->join('tb_user', 'pemberkasan_dibuat = username');
+		$query = $this->db->get();
+		return $query->result_array();
+	}
+
+	public function tambah_pemberkasan($data)
+	{
+		return $this->db->insert('tb_pemberkasan',$data);
+	}
 }
 ?>

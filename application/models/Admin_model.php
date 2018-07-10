@@ -13,6 +13,11 @@ class Admin_model extends CI_Model {
 		return $query->row_array();
 	}
 
+	public function ubah_kontak($data) {
+		$this->db->where('kontak_id',$data['kontak_id']);
+		return $this->db->update('tb_kontak',$data);
+	}
+
 // Perumahan
 	//Menampilkan Data Rumah
 	public function rumah() 

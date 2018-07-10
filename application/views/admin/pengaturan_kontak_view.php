@@ -83,7 +83,7 @@
               <i class="icon-map">
               </i>Google Maps
               <div class="card-header-actions">
-                <button type="button" class="btn btn-primary btn-sm">
+                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#gmapModal">
                   <span class="fa fa-pencil"> Ubah
                   </span>
                 </button>
@@ -98,10 +98,10 @@
     </div>
   </div>
 </main>
-
 <!-- MODAL ALAMAT -->
 <div class="modal fade" id="alamatModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-success" role="document">
+  <form action="<?php echo base_url('admin/pengaturan/ubah_alamatkantor')?>" method="post">
     <div class="modal-content">
       <div class="modal-header">
         <h4 class="modal-title">Ubah Alamat
@@ -113,31 +113,33 @@
       </div>
       <div class="modal-body">
         <div class="form-group row">
-<div class="col-md-12">
-<div class="input-group">
-<div class="input-group-prepend">
-<span class="input-group-text">
-<i class="fa fa-map-marker"></i>
-</span>
-</div>
-<input type="text" name="alamat" class="form-control" placeholder="Alamat" value="<?php echo $kontak['kontak_alamatkantor'];?>">
-</div>
-</div>
-</div>
+          <div class="col-md-12">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="fa fa-map-marker">
+                  </i>
+                </span>
+              </div>
+              <input type="text" name="kontak_alamatkantor" class="form-control" placeholder="Alamat" value="<?php echo $kontak['kontak_alamatkantor'];?>">
+            </div>
+          </div>
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal
         </button>
-        <button type="button" class="btn btn-success">Simpan
+        <button type="submit" class="btn btn-success">Simpan
         </button>
       </div>
     </div>
+  </form>
   </div>
 </div>
-
 <!-- MODAL NO HP -->
 <div class="modal fade" id="phoneModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-success modal-sm" role="document">
+  <form action="<?php echo base_url('admin/pengaturan/ubah_nohp')?>" method="post">
     <div class="modal-content">
       <div class="modal-header">
         <h4 class="modal-title">Ubah Nomor HP
@@ -149,31 +151,33 @@
       </div>
       <div class="modal-body">
         <div class="form-group row">
-<div class="col-md-12">
-<div class="input-group">
-<div class="input-group-prepend">
-<span class="input-group-text">
-<i class="fa fa-phone"></i>
-</span>
-</div>
-<input type="text" name="alamat" class="form-control" placeholder="Alamat" value="<?php echo $kontak['kontak_nohp'];?>">
-</div>
-</div>
-</div>
+          <div class="col-md-12">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="fa fa-phone">
+                  </i>
+                </span>
+              </div>
+              <input type="text" name="kontak_nohp" class="form-control" placeholder="Alamat" value="<?php echo $kontak['kontak_nohp'];?>">
+            </div>
+          </div>
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal
         </button>
-        <button type="button" class="btn btn-success">Simpan
+        <button type="submit" class="btn btn-success">Simpan
         </button>
       </div>
     </div>
+  </form>
   </div>
 </div>
-
-<!-- EMAIL NO HP -->
+<!-- MODAL EMAIL -->
 <div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-success modal-sm" role="document">
+  <form action="<?php echo base_url('admin/pengaturan/ubah_email')?>" method="post">
     <div class="modal-content">
       <div class="modal-header">
         <h4 class="modal-title">Ubah E-mail
@@ -185,17 +189,18 @@
       </div>
       <div class="modal-body">
         <div class="form-group row">
-<div class="col-md-12">
-<div class="input-group">
-<div class="input-group-prepend">
-<span class="input-group-text">
-<i class="fa fa-envelope"></i>
-</span>
-</div>
-<input type="text" name="alamat" class="form-control" placeholder="Alamat" value="<?php echo $kontak['kontak_email'];?>">
-</div>
-</div>
-</div>
+          <div class="col-md-12">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="fa fa-envelope">
+                  </i>
+                </span>
+              </div>
+              <input type="email" name="kontak_email" class="form-control" placeholder="Alamat" value="<?php echo $kontak['kontak_email'];?>">
+            </div>
+          </div>
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal
@@ -204,5 +209,44 @@
         </button>
       </div>
     </div>
+  </form>
+  </div>
+</div>
+<!-- MODAL GMAP -->
+<div class="modal fade" id="gmapModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-success modal-sm" role="document">
+  <form action="<?php echo base_url('admin/pengaturan/ubah_gmap')?>" method="post">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Ubah Google Map
+        </h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×
+          </span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group row">
+          <div class="col-md-12">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="fa fa-envelope">
+                  </i>
+                </span>
+              </div>
+              <input type="email" name="kontak_email" class="form-control" placeholder="Alamat" value="<?php echo $kontak['kontak_gmap'];?>">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal
+        </button>
+        <button type="button" class="btn btn-success">Simpan
+        </button>
+      </div>
+    </div>
+  </form>
   </div>
 </div>

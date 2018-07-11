@@ -26,5 +26,34 @@
         $('#datatable').DataTable();
       } );
     </script>
+    
+    <script>
+    $(document).ready(function() {
+        // Untuk sunting
+        $('#pernyataanModal').on('show.bs.modal', function (event) {
+            var div = $(event.relatedTarget) // Tombol dimana modal di tampilkan
+            var modal          = $(this)
+
+            // Isi nilai pada field
+            modal.find('#id').attr("value",div.data('id'));
+        });
+
+        $('#pekerjaModal').on('show.bs.modal', function (event) {
+            var div = $(event.relatedTarget) // Tombol dimana modal di tampilkan
+            var modal          = $(this)
+
+            // Isi nilai pada field
+            modal.find('#id').attr("value",div.data('id'));
+        });
+
+        $('#wiraswastaModal').on('show.bs.modal', function (event) {
+            var div = $(event.relatedTarget) // Tombol dimana modal di tampilkan
+            var modal = $(this)
+
+            // Isi nilai pada field
+            modal.find('#id').attr("value",div.data('id'));
+        });
+    });
+</script>
   </body>
 </html>

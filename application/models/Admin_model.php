@@ -96,5 +96,30 @@ class Admin_model extends CI_Model {
 	{
 		return $this->db->insert('tb_pemberkasan',$data);
 	}
+
+	public function pernyataan($id)
+	{
+		$this->db->select('*');
+		$this->db->from('tb_pemberkasan');
+		$this->db->join('tb_rumah', 'pemberkasan_rumah_id = rumah_id');
+		$this->db->where('pemberkasan_id', $id);
+		$query = $this->db->get();
+		return $query->row_array();
+	}
+
+	public function tambah_pernyataan($data) {
+		$this->db->where('pemberkasan_id',$data['pemberkasan_id']);
+		return $this->db->update('tb_pemberkasan',$data);
+	}
+
+	public function tambah_kerja($data) {
+		$this->db->where('pemberkasan_id',$data['pemberkasan_id']);
+		return $this->db->update('tb_pemberkasan',$data);
+	}
+
+	public function tambah_wiraswasta($data) {
+		$this->db->where('pemberkasan_id',$data['pemberkasan_id']);
+		return $this->db->update('tb_pemberkasan',$data);
+	}
 }
 ?>

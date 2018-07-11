@@ -25,7 +25,7 @@
     </td>
     <td>:
     </td>
-    <td>Faisal
+    <td><?php echo $pernyataan['pemberkasan_nama']; ?>
     </td>
   </tr>
   <tr>
@@ -33,7 +33,7 @@
     </td>
     <td>:
     </td>
-    <td>Faisal
+    <td><?php echo $pernyataan['pemberkasan_tempat_lahir']; ?> / <?php echo $pernyataan['pemberkasan_tgl_lahir']; ?>
     </td>
   </tr>
   <tr>
@@ -41,7 +41,7 @@
     </td>
     <td>:
     </td>
-    <td>Faisal
+    <td><?php echo $pernyataan['pemberkasan_pekerjaan']; ?>
     </td>
   </tr>
   <tr>
@@ -49,7 +49,7 @@
     </td>
     <td>:
     </td>
-    <td>Faisal
+    <td><?php echo $pernyataan['pemberkasan_noktp']; ?>
     </td>
   </tr>
   <tr>
@@ -57,7 +57,7 @@
     </td>
     <td>:
     </td>
-    <td>Faisal
+    <td><?php echo $pernyataan['pemberkasan_alamat']; ?>
     </td>
   </tr>
 </table>
@@ -71,7 +71,7 @@
 <ol style="text-align: justify;">
   <li>
     <span>
-      <span>Saya memiliki gaji/upah pokok Rp. .... per bulan atau memiliki hasil usaha rata-rata per bulan sebesar Rp. ...
+      <span>Saya memiliki gaji/upah pokok Rp. ............ per bulan atau memiliki hasil usaha rata-rata per bulan sebesar Rp. ............
       </span>
     </span>
   </li>
@@ -89,7 +89,7 @@
   </li>
   <li>
     <span>
-      <span>Saya membeli Rumah Sejahtera Tapak / Susun dengan harga Rp. ... dari pengembang PT. ....
+      <span>Saya membeli Rumah Sejahtera Tapak / Susun dengan harga Rp. <?php echo number_format($pernyataan['rumah_harga']); ?> dari pengembang PT. Balikpapan Skylink Property.
       </span>
     </span>
   </li>
@@ -130,7 +130,7 @@
   <tr style="text-align: center;">
     <td width="70%">
     </td>
-    <td>Samarinda, 31 Desember 2018
+    <td>Samarinda, <?php echo date('d F Y'); ?>
     </td>
   </tr>
 </table>
@@ -150,7 +150,7 @@
   <tr style="text-align: center;">
     <td width="70%">
     </td>
-    <td>Faisal
+    <td><?php echo $pernyataan['pemberkasan_nama']; ?>
     </td>
   </tr>
 </table>

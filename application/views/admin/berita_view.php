@@ -53,7 +53,7 @@
                       <div><?php echo $list['berita_judul']?>
                       </div>
                       <div class="small text-muted"> 
-                        <a class="icon-eye" href="<?php echo base_url('berita/detail/')?><?php echo $list['berita_id']?>"> View
+                        <a class="icon-eye" target="_BLANK" href="<?php echo base_url('berita/detail/')?><?php echo $list['berita_id']?>"> View
                         </a> | 
                         <a class="icon-trash" href="<?php echo base_url('admin/berita/hapus/')?><?php echo $list['berita_id']?>"> Delete
                         </a>

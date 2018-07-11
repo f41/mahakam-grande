@@ -37,8 +37,21 @@ class Grande_model extends CI_Model {
 		$this->db->select('*');
 		$this->db->from('tb_berita');
 		$this->db->join('tb_user', 'berita_dibuat = username');
+		$this->db->where('berita_status', 'POST');
+		$this->db->order_by('berita_tglbuat', 'DESC');
 		$query = $this->db->get();
 		return $query->result_array();
+	}
+
+	//Melihat Berita Tertentu
+	public function berita_detail($id)
+	{
+		$this->db->select('*');
+		$this->db->from('tb_berita');
+		$this->db->join('tb_user', 'berita_dibuat = username');
+		$this->db->where('berita_id', $id);
+		$query = $this->db->get();
+		return $query->row_array();
 	}
 }
 ?>

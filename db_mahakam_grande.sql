@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 09, 2018 at 06:14 AM
+-- Generation Time: Jul 11, 2018 at 06:53 AM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 5.6.33
 
@@ -43,7 +43,8 @@ CREATE TABLE `tb_berita` (
 --
 
 INSERT INTO `tb_berita` (`berita_id`, `berita_judul`, `berita_gambar`, `berita_isi`, `berita_tglbuat`, `berita_dibuat`, `berita_status`) VALUES
-('080718012350', 'rtfyguhijk', '09cbd139cfb41250d778bdd28629e7c9.png', '<p>uhjkl</p>', '2018-07-08 01:23:50', 'admin', 'POST');
+('080718012350', 'rtfyguhijk', '09cbd139cfb41250d778bdd28629e7c9.png', '<p>uhjkl</p>', '2018-07-08 01:23:50', 'admin', 'POST'),
+('110718090658', 'No no', '62b740383146af54c255fbb6bb73c567.jpg', '<p>awd</p>', '2018-07-11 09:06:58', 'Admin', 'POST');
 
 -- --------------------------------------------------------
 
@@ -65,7 +66,7 @@ CREATE TABLE `tb_kontak` (
 --
 
 INSERT INTO `tb_kontak` (`kontak_id`, `kontak_alamatkantor`, `kontak_nohp`, `kontak_email`, `kontak_gmap`, `kontak_about`) VALUES
-(0, 'Jl. Siradj salman Grand Mahakam No. C.5', '0822 5699 8899', 'grande@gmail.com', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.6713018253276!2d117.13287741416475!3d-0.4918678354127417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df67f1b1e9ab9b7%3A0x7b474ef3101bf9f1!2sMahakam+Grande+Marketing+Office!5e0!3m2!1sen!2sid!4v1521991149896\" width=\"100%\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>', 'Kami dari PT. Balikpapan Skylink Property ingin memberikan yang terbaik bagi masyarakat Kota Samarinda dan sekitarnya. Merupakan suatu kebanggaan tersendiri untuk kami ketika dapat mendukung dan berpartisipasi dalam Program Pemerintah yaitu Program Sejuta Rumah Murah. Maka dari itu, kami ingin memperkenalkan sebuah megaproyek yang sedang kami kerjakan. Yaitu Perumahan Mahakam Grande.');
+(0, 'Jl. Siradj salman Grand Mahakam No. C.5', '123', 'ASdW@yahoo.com', '', 'Kami dari PT. Balikpapan Skylink Property ingin memberikan yang terbaik bagi masyarakat Kota Samarinda dan sekitarnya. Merupakan suatu kebanggaan tersendiri untuk kami ketika dapat mendukung dan berpartisipasi dalam Program Pemerintah yaitu Program Sejuta Rumah Murah. Maka dari itu, kami ingin memperkenalkan sebuah megaproyek yang sedang kami kerjakan. Yaitu Perumahan Mahakam Grande.');
 
 -- --------------------------------------------------------
 
@@ -77,6 +78,11 @@ CREATE TABLE `tb_pemberkasan` (
   `pemberkasan_id` varchar(12) NOT NULL,
   `pemberkasan_nama` varchar(40) NOT NULL,
   `pemberkasan_rumah_id` int(11) NOT NULL,
+  `pemberkasan_noktp` varchar(30) NOT NULL,
+  `pemberkasan_tempat_lahir` varchar(30) NOT NULL,
+  `pemberkasan_tgl_lahir` date NOT NULL,
+  `pemberkasan_pekerjaan` varchar(30) NOT NULL,
+  `pemberkasan_alamat` varchar(255) NOT NULL,
   `pemberkasan_foto` varchar(255) NOT NULL,
   `pemberkasan_ktp_suami` varchar(255) DEFAULT NULL,
   `pemberkasan_ktp_istri` varchar(255) DEFAULT NULL,

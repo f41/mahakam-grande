@@ -44,13 +44,6 @@ class Pemberkasan extends CI_Controller {
 
 	    $this->load->library('upload', $upload_config);
 
-	    // create an album if not already exist in uploads dir
-    	// wouldn't make more sence if this part is done if there are no errors and right before the upload ??
-    	//if (!is_dir('./assets/'))
-    	//{
-       //		mkdir('./assets/', 0777, true);
-    	//}
-    	//$dir_exist = true; // flag for checking the directory exist or not
     	if (!is_dir('./assets/images/berkas/' . $nomorberkas . '/'))
     	{
         	mkdir('./assets/images/berkas/' . $nomorberkas . '/', 0777, true);
@@ -109,11 +102,89 @@ class Pemberkasan extends CI_Controller {
 	}
 }
 
-	public function pernyataan()
+	public function pernyataan($id)
 	{
 		$data = array (	
-						'title'			=> 'Rumah'
+						'title'			=> 'Surat Pernyataan',
+						'pernyataan'	=> $this->Admin_model->pernyataan($id)
 					  );
 		$this->load->view('admin/pernyataan_view',$data);
+	}
+
+	public function upload_pernyataan()
+	{
+		$nomorberkas = strtolower($this->input->post('berkas_id'));
+		
+	    $upload_config = array(
+	    						'encrypt_name'	=> TRUE,
+	    						'upload_path' 	=> './assets/images/berkas/' . $nomorberkas . '/', 
+	    						'allowed_types' =>'*'
+	    					);
+	    $this->load->library('upload', $upload_config);
+
+	    $this->upload->do_upload('berkas_surat_pernyataan');
+	    $pernyataan = $this->upload->data();
+
+	    $data = array(
+	            	'pemberkasan_id'    	  		=> $this->input->post('berkas_id'),
+	            	'pemberkasan_surat_pernyataan' 	=> $pernyataan['file_name']
+            	);
+		    
+		$this->Admin_model->tambah_pernyataan($data);
+		redirect(base_url().'admin/pemberkasan'); 	
+	}
+
+	public function upload_kerja()
+	{
+		$nomorberkas = strtolower($this->input->post('berkas_id'));
+		
+	    $upload_config = array(
+	    						'encrypt_name'	=> TRUE,
+	    						'upload_path' 	=> './assets/images/berkas/' . $nomorberkas . '/', 
+	    						'allowed_types' =>'*'
+	    					);
+	    $this->load->library('upload', $upload_config);
+
+	    $this->upload->do_upload('berkas_keterangan_kerja');
+	    $kerja = $this->upload->data();
+
+	    $this->upload->do_upload('berkas_slip_gaji');
+	    $slip = $this->upload->data();
+
+	    $data = array(
+	            	'pemberkasan_id'    	  		=> $this->input->post('berkas_id'),
+	            	'pemberkasan_keterangan_kerja' 	=> $kerja['file_name'],
+	            	'pemberkasan_slip_gaji'			=> $slip['file_name']
+            	);
+		    
+		$this->Admin_model->tambah_kerja($data);
+		redirect(base_url().'admin/pemberkasan'); 	
+	}
+
+	public function upload_wiraswasta()
+	{
+		$nomorberkas = strtolower($this->input->post('berkas_id'));
+		
+	    $upload_config = array(
+	    						'encrypt_name'	=> TRUE,
+	    						'upload_path' 	=> './assets/images/berkas/' . $nomorberkas . '/', 
+	    						'allowed_types' =>'*'
+	    					);
+	    $this->load->library('upload', $upload_config);
+
+	    $this->upload->do_upload('berkas_situ');
+	    $situ = $this->upload->data();
+
+	    $this->upload->do_upload('berkas_siup');
+	    $siup = $this->upload->data();
+
+	    $data = array(
+	            	'pemberkasan_id'    => $this->input->post('berkas_id'),
+	            	'pemberkasan_situ'	=> $situ['file_name'],
+	            	'pemberkasan_siup'	=> $siup['file_name']
+            	);
+		    
+		$this->Admin_model->tambah_wiraswasta($data);
+		redirect(base_url().'admin/pemberkasan'); 	
 	}
 }

@@ -14,6 +14,7 @@
         <div class="col-lg">
           <form action="<?php echo base_url('admin/berita/tambah');?>" method="POST" enctype="multipart/form-data">
             <div class="card">
+              <?php echo $error ?>
               <div class="card-header">
                 <span class="fa fa-home">&nbsp;Tambah Perumahan
                 </span>
@@ -62,7 +63,7 @@
                     </textarea>
                   </div>
                 </div>
-                <input type="text" name="berita_dibuat" value="admin">  
+                <input type="hidden" name="berita_dibuat" value="<?php echo ucfirst($this->session->userdata('username')); ?>">  
               </div>
               <div class="card-footer">
                 <button type="submit" class="btn btn-sm btn-primary">

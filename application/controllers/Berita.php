@@ -20,4 +20,16 @@ class Berita extends CI_Controller {
 					  );
 		$this->load->view('layout/wrapper',$data);
 	}
+
+	public function detail($id)
+	{
+		$data = array (	
+						'title'		=> 'Berita',
+						'menu'		=> 'berita',
+						'berita'	=> $this->Grande_model->berita_detail($id),
+						'kontak'	=> $this->Grande_model->kontak(),
+						'isi'	    => 'detail_berita_view'
+					  );
+		$this->load->view('layout/wrapper',$data);
+	}
 }

@@ -15,7 +15,9 @@ class Home extends CI_Controller {
 						'menu'		=> 'home',
 						'isi'	    => 'home_view',
 						'rumah'		=> $this->Grande_model->rumah(),
-						'kontak'	=> $this->Grande_model->kontak()
+						'kontak'	=> $this->Grande_model->kontak(),
+						'slider'	=> $this->Grande_model->slider(),
+						'testimoni' => $this->Grande_model->testimoni(),
 					  );
 		$this->load->view('layout/wrapper_index',$data);
 	}

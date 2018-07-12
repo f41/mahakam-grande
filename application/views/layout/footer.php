@@ -61,10 +61,6 @@
               <div><div class="contact_info_icon"><img src="<?php echo base_url('assets/');?>images/message.svg" alt=""></div></div>
               <div class="contact_info_text"><a href="mailto:<?php echo $kontak['kontak_email'];?>?Subject=Hello" target="_top"><?php echo $kontak['kontak_email'];?></a></div>
             </li>
-            <li class="contact_info_item d-flex flex-row">
-              <div><div class="contact_info_icon"><img src="<?php echo base_url('assets/');?>images/planet-earth.svg" alt=""></div></div>
-              <div class="contact_info_text"><a href="https://colorlib.com">www.colorlib.com</a></div>
-            </li>
           </ul>
         </div>
 

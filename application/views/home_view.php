@@ -103,54 +103,23 @@
         <div class="testimonials_slider_container">
           <!-- Testimonials Slider -->
           <div class="owl-carousel owl-theme testimonials_slider">
+            <?php foreach ($testimoni as $list) { ?>
             <!-- Testimonials Item -->
             <div class="owl-item">
               <div class="testimonials_item text-center">
-                <p class="testimonials_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae neque libero. Vivamus vel interdum massa. Mauris ut felis vel diam pretium eleifend vel eu neque. Mauris a condimentum tortor. Cras nec molestie est. Nulla vel facilisis metus. Quisque tempus fermentum enim, in feugiat sem laoreet
+                <p class="testimonials_text">
+                  <?php echo $list['testimoni_isi'] ?>
                 </p>
                 <div class="testimonial_user">
                   <div class="testimonial_image mx-auto">
-                    <img src="<?php echo base_url('assets/')?>images/testimoni/person.jpg" alt="https://unsplash.com/@remdesigns">
+                    <img src="<?php echo base_url('assets/images/testimoni/')?><?php echo $list['testimoni_foto']?>" alt="https://unsplash.com/@remdesigns">
                   </div>
-                  <div class="testimonial_name">natalie smith
-                  </div>
-                  <div class="testimonial_title">Client in California
+                  <div class="testimonial_name"><?php echo $list['testimoni_nama'] ?>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- Testimonials Item -->
-            <div class="owl-item">
-              <div class="testimonials_item text-center">
-                <p class="testimonials_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae neque libero. Vivamus vel interdum massa. Mauris ut felis vel diam pretium eleifend vel eu neque. Mauris a condimentum tortor. Cras nec molestie est. Nulla vel facilisis metus. Quisque tempus fermentum enim, in feugiat sem laoreet
-                </p>
-                <div class="testimonial_user">
-                  <div class="testimonial_image mx-auto">
-                    <img src="<?php echo base_url('assets/')?>images/testimoni/person.jpg" alt="https://unsplash.com/@remdesigns">
-                  </div>
-                  <div class="testimonial_name">natalie smith
-                  </div>
-                  <div class="testimonial_title">Client in California
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Testimonials Item -->
-            <div class="owl-item">
-              <div class="testimonials_item text-center">
-                <p class="testimonials_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae neque libero. Vivamus vel interdum massa. Mauris ut felis vel diam pretium eleifend vel eu neque. Mauris a condimentum tortor. Cras nec molestie est. Nulla vel facilisis metus. Quisque tempus fermentum enim, in feugiat sem laoreet
-                </p>
-                <div class="testimonial_user">
-                  <div class="testimonial_image mx-auto">
-                    <img src="<?php echo base_url('assets/')?>images/testimoni/person.jpg" alt="https://unsplash.com/@remdesigns">
-                  </div>
-                  <div class="testimonial_name">natalie smith
-                  </div>
-                  <div class="testimonial_title">Client in California
-                  </div>
-                </div>
-              </div>
-            </div>
+          <?php } ?>
           </div>
         </div>
       </div>

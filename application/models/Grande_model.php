@@ -5,6 +5,18 @@ class Grande_model extends CI_Model {
 		$this->load->database();
 	}
 
+	//Slider
+	public function slider()
+	{
+		$query = $this->db->get('tb_slider');
+		return $query->result_array();
+	}
+
+	public function testimoni()
+	{
+		$query = $this->db->get('tb_testimoni');
+		return $query->result_array();
+	}
 	//Menampilkan Data Kontak
 	public function kontak() 
 	{

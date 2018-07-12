@@ -205,7 +205,7 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal
         </button>
-        <button type="button" class="btn btn-success">Simpan
+        <button type="submit" class="btn btn-success">Simpan
         </button>
       </div>
     </div>
@@ -228,22 +228,14 @@
       <div class="modal-body">
         <div class="form-group row">
           <div class="col-md-12">
-            <div class="input-group">
-              <div class="input-group-prepend">
-                <span class="input-group-text">
-                  <i class="fa fa-envelope">
-                  </i>
-                </span>
-              </div>
-              <input type="email" name="kontak_email" class="form-control" placeholder="Alamat" value="<?php echo $kontak['kontak_gmap'];?>">
-            </div>
+              <textarea class="form-control" rows="9" name="kontak_gmap"><?php echo $kontak['kontak_gmap'];?></textarea>
           </div>
         </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal
         </button>
-        <button type="button" class="btn btn-success">Simpan
+        <button type="submit" class="btn btn-success">Simpan
         </button>
       </div>
     </div>

@@ -28,6 +28,21 @@
                     <label for="company">Nama
                     </label>
                     <input type="text" name="berkas_nama" class="form-control"placeholder="Nama" autofocus >
+                    <label for="company">Nomor KTP
+                    </label>
+                    <input type="text" name="berkas_noktp" class="form-control"placeholder="Nomor KTP">
+                    <label for="company">Tempat Lahir
+                    </label>
+                    <input type="text" name="berkas_tempat_lahir" class="form-control"placeholder="Tempat Lahir">
+                    <label for="company">Tanggal Lahir
+                    </label>
+                    <input type="date" name="berkas_tgl_lahir" class="form-control">
+                    <label for="company">Pekerjaan
+                    </label>
+                    <input type="text" name="berkas_pekerjaan" class="form-control"placeholder="Pekerjaan">
+                    <label for="company">Alamat
+                    </label>
+                    <textarea name="berkas_alamat" class="form-control"placeholder="Alamat"></textarea>
                     <label for="company">Type Rumah
                     </label>
                     <select name="berkas_rumah_id" class="form-control" >

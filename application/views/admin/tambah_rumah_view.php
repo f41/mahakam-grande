@@ -110,8 +110,8 @@
                   <div class="form-group col-lg">
                     <label for="company">Spesifikasi Bangunan
                     </label>
-                    <textarea name="rumah_spesifikasi" required>
-                    </textarea>
+                    <textarea1 name="rumah_spesifikasi" required>
+                    </textarea1>
                   </div>
                 </div>
                 <div class="row">

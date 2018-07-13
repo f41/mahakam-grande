@@ -14,7 +14,6 @@
         <div class="col-lg">
           <form action="<?php echo base_url('admin/berita/tambah');?>" method="POST" enctype="multipart/form-data">
             <div class="card">
-              <?php echo $error ?>
               <div class="card-header">
                 <span class="fa fa-home">&nbsp;Tambah Perumahan
                 </span>
@@ -59,8 +58,8 @@
                   <div class="form-group col-lg">
                     <label for="company">Isi Berita
                     </label>
-                    <textarea name="berita_isi" required>
-                    </textarea>
+                    <textarea1 name="berita_isi" required>
+                    </textarea1>
                   </div>
                 </div>
                 <input type="hidden" name="berita_dibuat" value="<?php echo ucfirst($this->session->userdata('username')); ?>">  

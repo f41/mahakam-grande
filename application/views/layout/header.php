@@ -45,6 +45,7 @@
                 <li class="main_nav_item"><a href="<?php echo base_url();?>">home</a></li>
                 <li class="main_nav_item"><a href="<?php echo base_url('berita');?>">berita</a></li>
                 <li class="main_nav_item"><a href="<?php echo base_url('kontak');?>">contact</a></li>
+                <li class="main_nav_item"><a href="<?php echo base_url('galeri');?>">galery</a></li>
               </ul>
             </nav>
             

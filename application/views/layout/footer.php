@@ -97,6 +97,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <?php echo $this->session->flashdata('notif'); ?>
   
 </script>
+
+<script type="text/javascript">window.PixleeAsyncInit = function() {Pixlee.init({apiKey:'pnkjaeA1gfew6ErTjw5G'});Pixlee.addSimpleWidget({widgetId:'6424'});};</script><script src="//instafeed.assets.pixlee.com/assets/pixlee_widget_1_0_0.js"></script>
 </body>
 
 </html>

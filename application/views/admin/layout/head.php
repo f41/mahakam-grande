@@ -27,7 +27,7 @@ $this->simple_login->cek_login();
     <link href="<?php echo base_url('assets/admin/');?>node_modules/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
     <!-- Tiny MCE -->
     <script src="<?php echo base_url('assets/admin/');?>node_modules/tinymce/tinymce.min.js"></script>
-    <script>tinymce.init({ selector:'textarea1' });</script>
+    <script>tinymce.init({ selector:'#textarea' });</script>
     <!-- Main styles for this application-->
     <link href="<?php echo base_url('assets/admin/');?>css/style.css" rel="stylesheet">
     <link href="<?php echo base_url('assets/admin/');?>vendors/pace-progress/css/pace.min.css" rel="stylesheet">

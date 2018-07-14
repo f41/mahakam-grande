@@ -47,7 +47,7 @@ class Berita extends CI_Controller {
                         'berita_gambar'     => $gbr['file_name'],
                         'berita_isi'		=> $this->input->post('berita_isi'),
                         'berita_tglbuat'	=> date('Y-m-d h:i:s'),
-                       	'berita_dibuat'		=> $this->input->post('berita_dibuat'),
+                       	'berita_dibuat'		=> strtolower($this->input->post('berita_dibuat')),
                        	'berita_status'		=> $this->input->post('berita_status')
                     );
 		          $this->Admin_model->tambah_berita($data);

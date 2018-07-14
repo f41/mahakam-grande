@@ -58,8 +58,8 @@
                   <div class="form-group col-lg">
                     <label for="company">Isi Berita
                     </label>
-                    <textarea1 name="berita_isi" required>
-                    </textarea1>
+                    <textarea id="textarea" name="berita_isi" required>
+                    </textarea>
                   </div>
                 </div>
                 <input type="hidden" name="berita_dibuat" value="<?php echo ucfirst($this->session->userdata('username')); ?>">  

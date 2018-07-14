@@ -142,29 +142,33 @@ if ($wiraswasta == null) {
                     <td class="text-center">
                       <?php
 $status = $list['pemberkasan_status'];
-if ($status == null) { 
-?>
-                      <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
-                        <button type="button" class="btn btn-warning" data-toggle="tooltip" data-placement="top" title="Detail">
+$pernyataan = $list['pemberkasan_surat_pernyataan'];
+$kerja = $list['pemberkasan_keterangan_kerja'];
+$kerja1 = $list['pemberkasan_slip_gaji'];
+$wiraswasta = $list['pemberkasan_situ'];
+$wiraswasta1 = ['pemberkasan_siup'];
+$view = '<button type="button" class="btn btn-warning" data-toggle="tooltip" data-placement="top" title="Detail">
                           <span class="fa fa-eye">
                           </span>
-                        </button>
-                        <button type="button" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Accept">
+                        </button>';
+$accept = ' <button type="button" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Accept">
                           <span class="fa fa-check">
                           </span>
-                        </button>
-                        <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Ignore">
+                        </button>';
+$reject = '<button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Ignore">
                           <span class="fa fa-close">
                           </span>
-                        </button>
+                        </button>';
+if ($pernyataan == null or ($kerja == null and $kerja1 == null) or $status == null or ($wiraswasta == null and $wiraswasta1 == null)) { 
+?>
+                      <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
+                        <?= $accept ?>
+                        <?= $reject ?>
                       </div>
                       <?php 
 }else { ?>
                       <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
-                        <button type="button" class="btn btn-warning" data-toggle="tooltip" data-placement="top" title="Detail">
-                          <span class="fa fa-eye">
-                          </span>
-                        </button>
+                        <?= $view ?>
                       </div>
                       <?php } ?>
                     </td>

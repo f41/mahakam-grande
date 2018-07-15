@@ -104,8 +104,8 @@ class Pemberkasan extends CI_Controller {
 		    
 		$this->Admin_model->tambah_pemberkasan($data);
 		redirect(base_url().'admin/pemberkasan'); 	
+		}
 	}
-}
 
 	public function pernyataan($id)
 	{
@@ -191,5 +191,15 @@ class Pemberkasan extends CI_Controller {
 		    
 		$this->Admin_model->tambah_wiraswasta($data);
 		redirect(base_url().'admin/pemberkasan'); 	
+	}
+
+	public function detail($id)
+	{
+		$data = array(
+					'title' 	=> 'Detail',
+					'berkas'	=> $this->Admin_model->detail_pemberkasan($id),
+					'isi'		=> 'admin/detail_pemberkasan_view'
+				);
+		$this->load->view('admin/layout/wrapper',$data);
 	}
 }

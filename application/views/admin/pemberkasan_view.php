@@ -141,16 +141,17 @@ if ($wiraswasta == null) {
                     </td>
                     <td class="text-center">
                       <?php
+$id = $list['pemberkasan_id'];
 $status = $list['pemberkasan_status'];
 $pernyataan = $list['pemberkasan_surat_pernyataan'];
 $kerja = $list['pemberkasan_keterangan_kerja'];
 $kerja1 = $list['pemberkasan_slip_gaji'];
 $wiraswasta = $list['pemberkasan_situ'];
 $wiraswasta1 = ['pemberkasan_siup'];
-$view = '<button type="button" class="btn btn-warning" data-toggle="tooltip" data-placement="top" title="Detail">
-                          <span class="fa fa-eye">
+$view = "<a href='pemberkasan/detail/$id' type='button' class='btn btn-warning' data-toggle='tooltip' data-placement='top' title='Detail'>
+                          <span class='fa fa-eye'>
                           </span>
-                        </button>';
+                        </a>";
 $accept = ' <button type="button" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Accept">
                           <span class="fa fa-check">
                           </span>
@@ -159,16 +160,15 @@ $reject = '<button type="button" class="btn btn-danger" data-toggle="tooltip" da
                           <span class="fa fa-close">
                           </span>
                         </button>';
-if ($pernyataan == null or ($kerja == null and $kerja1 == null) or $status == null or ($wiraswasta == null and $wiraswasta1 == null)) { 
+if ($status != null) { 
 ?>
                       <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
-                        <?= $accept ?>
-                        <?= $reject ?>
+                        <?= $view ?>
                       </div>
                       <?php 
 }else { ?>
                       <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
-                        <?= $view ?>
+                        <?= $accept ?>
                       </div>
                       <?php } ?>
                     </td>

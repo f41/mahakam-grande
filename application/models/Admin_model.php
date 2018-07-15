@@ -121,5 +121,10 @@ class Admin_model extends CI_Model {
 		$this->db->where('pemberkasan_id',$data['pemberkasan_id']);
 		return $this->db->update('tb_pemberkasan',$data);
 	}
+
+	public function detail_pemberkasan($id){
+		$query = $this->db->get_where('tb_pemberkasan', array('pemberkasan_id' => $id));
+		return $query->row_array();
+	}
 }
 ?>

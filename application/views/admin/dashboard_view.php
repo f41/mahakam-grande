@@ -21,7 +21,6 @@
         </ol>
         <div class="container-fluid">
           <div class="animated fadeIn">
-<button onclick="sweet()">Sweet Alert</button>
           </div>
 
         </div>

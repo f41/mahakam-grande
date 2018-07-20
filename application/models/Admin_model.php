@@ -81,6 +81,12 @@ class Admin_model extends CI_Model {
 // End Berita
 
 // Pemberkasan
+	//
+	public function berkas_lengkap()
+	{
+		$query = $this->db->get('tb_pemberkasan');
+		return $query->result_array();
+	}
 	//Menampilkan Data Pemberkasan
 	public function pemberkasan() 
 	{

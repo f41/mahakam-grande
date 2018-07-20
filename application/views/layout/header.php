@@ -42,10 +42,11 @@
 
             <nav class="main_nav">
               <ul class="main_nav_list">
-                <li class="main_nav_item"><a href="<?php echo base_url();?>">home</a></li>
+                <li class="main_nav_item"><a href="<?php echo base_url();?>">beranda</a></li>
                 <li class="main_nav_item"><a href="<?php echo base_url('berita');?>">berita</a></li>
-                <li class="main_nav_item"><a href="<?php echo base_url('kontak');?>">contact</a></li>
-                <li class="main_nav_item"><a href="<?php echo base_url('galeri');?>">galery</a></li>
+                <li class="main_nav_item"><a href="<?php echo base_url('galeri');?>">galeri</a></li>
+                <li class="main_nav_item"><a href="<?php echo base_url('alur');?>">alur</a></li>
+                <li class="main_nav_item"><a href="<?php echo base_url('kontak');?>">kontak</a></li>
               </ul>
             </nav>
             

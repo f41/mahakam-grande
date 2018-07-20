@@ -27,16 +27,13 @@
                     <input type="text" name="berkas_id" class="form-control" value="<?php echo $berkas['pemberkasan_id'] ?>" readonly>
                     <label for="company">Nama
                     </label>
-                    <input type="text" name="berkas_nama" class="form-control"placeholder="Nama" autofocus >
+                    <input type="text" name="berkas_nama" class="form-control" value="<?php echo $berkas['pemberkasan_nama'] ?>" readonly>
                     <label for="company">Nomor KTP
                     </label>
-                    <input type="text" name="berkas_noktp" class="form-control"placeholder="Nomor KTP">
-                    <label for="company">Tempat Lahir
+                    <input type="text" name="berkas_noktp" class="form-control" value="<?php echo $berkas['pemberkasan_noktp'] ?>" readonly>
+                    <label for="company">Tempat / Tanggal Lahir
                     </label>
-                    <input type="text" name="berkas_tempat_lahir" class="form-control"placeholder="Tempat Lahir">
-                    <label for="company">Tanggal Lahir
-                    </label>
-                    <input type="date" name="berkas_tgl_lahir" class="form-control">
+                    <input type="text" name="berkas_tempat_lahir" class="form-control" value="<?php echo $berkas['pemberkasan_tempat_lahir'] ?> / <?php echo date_format('D-M-Y',$berkas['pemberkasan_tgl_lahir']) ?>" readonly" readonly>
                     <label for="company">Pekerjaan
                     </label>
                     <input type="text" name="berkas_pekerjaan" class="form-control"placeholder="Pekerjaan">

@@ -74,13 +74,16 @@
                       <?php
 $status = $list['pemberkasan_status'];
 if ($status == '') {
-echo "Proses";
+echo "<span class='badge badge-pill badge-warning'>Proses
+                      </span>";
 }
 elseif ($status == 0) {
-echo "Reject";
+echo "<span class='badge badge-pill badge-danger'>Ditolak
+                      </span>";
 }
 elseif ($status == 1) {
-echo "Accept";
+echo "<span class='badge badge-pill badge-success'>Selesai
+                      </span>";
 }
 ?>
                     </td>
@@ -101,7 +104,7 @@ if ($surat == null) {
                       </div>
                       <?php 
 }else { ?>
-                      <span class="badge badge-pill badge-success">Complete
+                      <span class="badge badge-pill badge-success">Selesai
                       </span>
                       <?php } ?>
                     </td>
@@ -118,7 +121,7 @@ if ($kerja == null) {
                       </div>
                       <?php 
 }else { ?>
-                      <span class="badge badge-pill badge-success">Complete
+                      <span class="badge badge-pill badge-success">Selesai
                       </span>
                       <?php } ?>
                     </td>

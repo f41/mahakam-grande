@@ -2,6 +2,7 @@
       <div class="sidebar">
         <nav class="sidebar-nav">
           <ul class="nav">
+            <?php if ($this->session->userdata('level') == '1') { ?>
             <li class="nav-item">
               <a class="nav-link" href="<?php echo base_url('admin/dashboard');?>">
                 <i class="nav-icon icon-speedometer"></i> Dashboard
@@ -34,7 +35,7 @@
               </ul>
               <ul class="nav-dropdown-items">
                 <li class="nav-item">
-                  <a class="nav-link" href="<?php echo base_url('admin/laporan/berkas_lengkap');?>">
+                  <a class="nav-link" href="<?php echo base_url('admin/laporan/berkas_tidak_lengkap');?>">
                     <i class="nav-icon icon-doc icons"></i> Berkas Tidak Lengkap</a>
                 </li>
               </ul>
@@ -50,6 +51,24 @@
               </ul>
             </li>
           </ul>
+        <?php } else { ?>
+          <li class="nav-item nav-dropdown">
+              <a class="nav-link nav-dropdown-toggle" href="#">
+                <i class="nav-icon icon-doc"></i> Laporan</a>
+              <ul class="nav-dropdown-items">
+                <li class="nav-item">
+                  <a class="nav-link" href="<?php echo base_url('admin/laporan/berkas_lengkap');?>">
+                    <i class="nav-icon icon-doc"></i> Berkas Lengkap</a>
+                </li>
+              </ul>
+              <ul class="nav-dropdown-items">
+                <li class="nav-item">
+                  <a class="nav-link" href="<?php echo base_url('admin/laporan/berkas_tidak_lengkap');?>">
+                    <i class="nav-icon icon-doc icons"></i> Berkas Tidak Lengkap</a>
+                </li>
+              </ul>
+            </li>
+          <?php } ?>
         </nav>
         <button class="sidebar-minimizer brand-minimizer" type="button"></button>
       </div>

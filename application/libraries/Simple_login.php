@@ -20,10 +20,12 @@ class Simple_login
  			$admin = $row->row();
  			$username = $admin->username;
  			$nama = $admin->nama_user;
+ 			$level = $admin->level;
  			
  			$this->CI->session->set_userdata('username', $username);
  			$this->CI->session->set_userdata('id_login', uniqid(rand()));
  			$this->CI->session->set_userdata('nama', $nama);
+ 			$this->CI->session->set_userdata('level', $level);
  			redirect(base_url('admin/dashboard'));
  		}else{
  			$this->CI->session->set_flashdata('sukses','Oops... Username/password salah');

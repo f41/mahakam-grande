@@ -84,9 +84,17 @@ class Admin_model extends CI_Model {
 	//
 	public function berkas_lengkap()
 	{
-		$query = $this->db->get('tb_pemberkasan');
+		$query = $this->db->get_where('tb_pemberkasan', array('pemberkasan_status' => '1'));
 		return $query->result_array();
 	}
+
+	//
+	public function berkas_tidaklengkap()
+	{
+		$query = $this->db->get_where('tb_pemberkasan', array('pemberkasan_status' => '0'));
+		return $query->result_array();
+	}
+
 	//Menampilkan Data Pemberkasan
 	public function pemberkasan() 
 	{

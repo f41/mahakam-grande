@@ -159,7 +159,8 @@ class Pemberkasan extends CI_Controller {
 	    $data = array(
 	            	'pemberkasan_id'    	  		=> $this->input->post('berkas_id'),
 	            	'pemberkasan_keterangan_kerja' 	=> $kerja['file_name'],
-	            	'pemberkasan_slip_gaji'			=> $slip['file_name']
+	            	'pemberkasan_slip_gaji'			=> $slip['file_name'],
+	            	'pemberkasan_status'			=> '1'
             	);
 		    
 		$this->Admin_model->tambah_kerja($data);
@@ -186,7 +187,8 @@ class Pemberkasan extends CI_Controller {
 	    $data = array(
 	            	'pemberkasan_id'    => $this->input->post('berkas_id'),
 	            	'pemberkasan_situ'	=> $situ['file_name'],
-	            	'pemberkasan_siup'	=> $siup['file_name']
+	            	'pemberkasan_siup'	=> $siup['file_name'],
+	            	'pemberkasan_status'			=> '1'
             	);
 		    
 		$this->Admin_model->tambah_wiraswasta($data);

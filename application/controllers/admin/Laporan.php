@@ -18,4 +18,14 @@ class Laporan extends CI_Controller {
 					  );
 		$this->load->view('admin/layout/wrapper',$data);
 	}
+
+	public function berkas_tidak_lengkap()
+	{
+		$data = array (	
+						'title'		=> 'Berkas Lengkap',
+						'isi'	    => 'admin/lap_berkas_tidaklengkap_view',
+						'lengkap'	=> $this->Admin_model->berkas_tidaklengkap()
+					  );
+		$this->load->view('admin/layout/wrapper',$data);
+	}
 }

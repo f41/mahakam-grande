@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 12, 2018 at 06:43 AM
+-- Generation Time: Jul 23, 2018 at 12:50 AM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 5.6.33
 
@@ -89,11 +89,9 @@ CREATE TABLE `tb_pemberkasan` (
   `pemberkasan_situ` varchar(255) DEFAULT NULL,
   `pemberkasan_siup` varchar(255) DEFAULT NULL,
   `pemberkasan_surat_pernyataan` varchar(255) DEFAULT NULL,
-  `pemberkasan_status` char(1) DEFAULT NULL COMMENT 'null = on proses; 0 = reject; 1 = accept;',
+  `pemberkasan_status` char(1) DEFAULT '0' COMMENT '0 = blm lngkap; 1 = lengkap',
   `pemberkasan_dibuat` varchar(255) NOT NULL,
-  `pemberkasan_tglbuat` datetime NOT NULL,
-  `pemberkasan_diedit` varchar(10) DEFAULT NULL,
-  `pemberkasan_tgledit` datetime DEFAULT NULL
+  `pemberkasan_tglbuat` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -179,8 +177,8 @@ CREATE TABLE `tb_testimoni` (
 --
 
 INSERT INTO `tb_testimoni` (`testimoni_id`, `testimoni_nama`, `testimoni_isi`, `testimoni_foto`) VALUES
-(1, 'Faisal', 'Bagus', 'person.jpg'),
-(2, 'Efendi', 'Lumayan', 'person.jpg');
+(1, 'Lorem Ipsum', 'Bagus', 'person.jpg'),
+(2, 'Lorem Ipsum', 'Lumayan', 'person.jpg');
 
 -- --------------------------------------------------------
 
@@ -192,15 +190,17 @@ CREATE TABLE `tb_user` (
   `username` varchar(10) NOT NULL,
   `nama_user` varchar(200) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `password` varchar(255) NOT NULL
+  `password` varchar(255) NOT NULL,
+  `level` char(1) NOT NULL COMMENT '1=admin; 2=pimpinan'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tb_user`
 --
 
-INSERT INTO `tb_user` (`username`, `nama_user`, `email`, `password`) VALUES
-('admin', 'Administrator', 'admin@gmail.com', '21232f297a57a5a743894a0e4a801fc3');
+INSERT INTO `tb_user` (`username`, `nama_user`, `email`, `password`, `level`) VALUES
+('admin', 'Administrator', 'admin@gmail.com', '21232f297a57a5a743894a0e4a801fc3', '1'),
+('pimpin', 'Pimpinan', 'dsa', 'b9a982bcc46e98b3aa86e7bc526b869f', '2');
 
 --
 -- Indexes for dumped tables
@@ -268,7 +268,7 @@ ALTER TABLE `tb_rumah`
 -- AUTO_INCREMENT for table `tb_slider`
 --
 ALTER TABLE `tb_slider`
-  MODIFY `slider_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `slider_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tb_testimoni`

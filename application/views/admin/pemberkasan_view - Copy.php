@@ -40,6 +40,8 @@
                       <i class="icon-calendar">
                       </i> Tanggal
                     </th>
+                    <th class="text-center">Status
+                    </th>
                     <th>
                       Pernyataan
                     </th>
@@ -48,6 +50,8 @@
                     </th>
                     <th>
                       Wirausaha
+                    </th>
+                    <th>
                     </th>
                   </tr>
                 </thead>
@@ -65,6 +69,23 @@
                     </td>
                     <td>
                       <?php echo $list['pemberkasan_tglbuat']?>
+                    </td>
+                    <td class="text-center">
+                      <?php
+$status = $list['pemberkasan_status'];
+if ($status == '') {
+echo "<span class='badge badge-pill badge-warning'>Proses
+                      </span>";
+}
+elseif ($status == 0) {
+echo "<span class='badge badge-pill badge-danger'>Ditolak
+                      </span>";
+}
+elseif ($status == 1) {
+echo "<span class='badge badge-pill badge-success'>Selesai
+                      </span>";
+}
+?>
                     </td>
                     <td class="text-center">
                       <?php
@@ -119,6 +140,39 @@ if ($wiraswasta == null) {
 }else { ?>
                       <span class="badge badge-pill badge-success">Complete
                       </span>
+                      <?php } ?>
+                    </td>
+                    <td class="text-center">
+                      <?php
+$id = $list['pemberkasan_id'];
+$status = $list['pemberkasan_status'];
+$pernyataan = $list['pemberkasan_surat_pernyataan'];
+$kerja = $list['pemberkasan_keterangan_kerja'];
+$kerja1 = $list['pemberkasan_slip_gaji'];
+$wiraswasta = $list['pemberkasan_situ'];
+$wiraswasta1 = ['pemberkasan_siup'];
+$view = "<a href='pemberkasan/detail/$id' type='button' class='btn btn-warning' data-toggle='tooltip' data-placement='top' title='Detail'>
+                          <span class='fa fa-eye'>
+                          </span>
+                        </a>";
+$accept = ' <button type="button" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Accept">
+                          <span class="fa fa-check">
+                          </span>
+                        </button>';
+$reject = '<button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Ignore">
+                          <span class="fa fa-close">
+                          </span>
+                        </button>';
+if ($status != null) { 
+?>
+                      <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
+                        <?= $view ?>
+                      </div>
+                      <?php 
+}else { ?>
+                      <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
+                        <?= $accept ?>
+                      </div>
                       <?php } ?>
                     </td>
                   </tr>

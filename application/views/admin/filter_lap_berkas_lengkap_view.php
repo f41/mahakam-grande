@@ -46,6 +46,8 @@
                     <span class="fa fa-print">
                     </span> Cetak
                   </a>
+                  <label class="col-md-6 col-form-label" for="hf-email">Periode: <?php echo $start ?> - <?php echo $end ?>
+                  </label>
                 </div>
               </div>
               <table id="datatable" class="table table-responsive-sm table-hover table-outline mb-0">

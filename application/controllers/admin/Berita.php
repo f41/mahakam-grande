@@ -56,7 +56,7 @@ class Berita extends CI_Controller {
 	   }
     }
     
-    //Menghapus Data Paket
+    //Menghapus Data
 	public function hapus($id) {
 		$this->Admin_model->hapus_berita($id);
 		redirect(base_url().'admin/berita');

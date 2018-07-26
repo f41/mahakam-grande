@@ -42,10 +42,14 @@
                   </form>
                 </div>
                 <div class="col-lg-6">
-                  <a href="<?php echo base_url('admin/laporan/cetak_berkas_tidak_lengkap')?>" target="_BLANK" type="button" class="btn btn-primary">
+                  <button type="button" class="btn btn-primary">
                     <span class="fa fa-print">
                     </span> Cetak
-                  </a>
+                  </button>
+                  <label class="col-md-6 col-form-label" for="hf-email">Periode: <?php echo $start ?> - <?php echo $end ?>
+                  </label>
+                  <input name="start" class="form-control" type="hidden" value="<?php echo $start ?>">
+                  <input name="end" class="form-control" type="hidden" value="<?php echo $end ?>">
                 </div>
               </div>
               <table class="table table-responsive-sm table-hover table-outline mb-0">

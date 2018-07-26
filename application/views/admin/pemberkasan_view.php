@@ -49,6 +49,7 @@
                     <th>
                       Wirausaha
                     </th>
+                    <th></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -117,9 +118,15 @@ if ($wiraswasta == null) {
                       </div>
                       <?php 
 }else { ?>
-                      <span class="badge badge-pill badge-success">Complete
+                      <span class="badge badge-pill badge-success">Selesai
                       </span>
                       <?php } ?>
+                    </td>
+                    <td>
+                      <a href="<?php echo base_url('admin/pemberkasan/hapus/')?><?php echo $list['pemberkasan_id']; ?>" type="button" class="btn btn-danger btn-sm" data-toggle="tooltip" data-placement="top" title="Hapus">
+                          <span class="fa fa-trash">
+                          </span>
+                        </a>
                     </td>
                   </tr>
                   <?php } ?>

@@ -204,4 +204,10 @@ class Pemberkasan extends CI_Controller {
 				);
 		$this->load->view('admin/layout/wrapper',$data);
 	}
+
+	//Menghapus Data
+	public function hapus($id) {
+		$this->Admin_model->hapus_berkas($id);
+		redirect(base_url().'admin/pemberkasan');
+	}
 }

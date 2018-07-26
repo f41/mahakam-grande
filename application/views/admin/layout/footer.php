@@ -21,6 +21,10 @@
     <script src="<?php echo base_url('assets/admin/');?>node_modules/datatable/datatables.min.js"></script>
     <script src="<?php echo base_url('assets/admin/');?>node_modules/tooltips.js"></script>
     <script src="<?php echo base_url('assets/admin/');?>vendors/sweetalert.js"></script>
+    <!-- Date Range Picker -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url('assets/admin/');?>node_modules/daterange-picker/daterangepicker.js"></script>
 
     <script type="text/javascript">
       $(document).ready(function() {
@@ -55,6 +59,26 @@
             modal.find('#id').attr("value",div.data('id'));
         });
     });
+</script>
+    <script type="text/javascript">
+$(function() {
+
+  $('input[name="datefilter"]').daterangepicker({
+      autoUpdateInput: false,
+      locale: {
+          cancelLabel: 'Clear'
+      }
+  });
+
+  $('input[name="datefilter"]').on('apply.daterangepicker', function(ev, picker) {
+      $(this).val(picker.startDate.format('YYYY-MM-DD') + ' - ' + picker.endDate.format('YYYY-MM-DD'));
+  });
+
+  $('input[name="datefilter"]').on('cancel.daterangepicker', function(ev, picker) {
+      $(this).val('');
+  });
+
+});
 </script>
   </body>
 </html>

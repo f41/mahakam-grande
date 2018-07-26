@@ -88,10 +88,35 @@ class Admin_model extends CI_Model {
 		return $query->result_array();
 	}
 
+	public function filter_berkas_lengkap($start, $end)
+	{
+		$query = $this->db->query("
+									SELECT * FROM tb_pemberkasan
+									WHERE
+										pemberkasan_status = 1 AND
+										pemberkasan_tglbuat BETWEEN 
+											'$start' AND '$end'
+								");
+		return $query->result_array();
+	}
+
 	//
 	public function berkas_tidaklengkap()
 	{
 		$query = $this->db->get_where('tb_pemberkasan', array('pemberkasan_status' => '0'));
+		return $query->result_array();
+	}
+
+	//
+	public function filter_berkas_tidaklengkap($start, $end)
+	{
+		$query = $this->db->query("
+									SELECT * FROM tb_pemberkasan
+									WHERE
+										pemberkasan_status = 0 AND
+										pemberkasan_tglbuat BETWEEN 
+											'$start' AND '$end'
+								");
 		return $query->result_array();
 	}
 
@@ -139,6 +164,12 @@ class Admin_model extends CI_Model {
 	public function detail_pemberkasan($id){
 		$query = $this->db->get_where('tb_pemberkasan', array('pemberkasan_id' => $id));
 		return $query->row_array();
+	}
+
+	//Hapus Berkas
+	public function hapus_berkas($id) {
+		$this->db->where('pemberkasan_id',$id);
+		return $this->db->delete('tb_pemberkasan');
 	}
 }
 ?>

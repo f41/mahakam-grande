@@ -34,4 +34,6 @@ $this->simple_login->cek_login();
     <link href="<?php echo base_url('assets/admin/');?>css/bootstrap-fileupload.min.css" rel="stylesheet">
     <!-- DataTable -->
     <link href="<?php echo base_url('assets/admin/');?>node_modules/datatable/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <!-- Date Range Picker-->
+    <link rel="stylesheet" type="text/css" media="all" href="<?php echo base_url('assets/admin/');?>node_modules/daterange-picker/daterangepicker.css" />
   </head>
